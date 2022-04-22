@@ -1,11 +1,22 @@
-@import "../colors.scss";
+@import '../../style/colors.scss';
 
-.registrationComponent__registrationWrapper {
+.registrationPage {
+    display: flex;
+    justify-content: center;
+}
+
+.registrationPage__column {
+    &_left {
+        padding: 14rem 20rem 14rem 15rem;
+        width: fit-content;
+    }
+}
+
+.registrationPage__registrationWrapper {
     width: 40rem;
 }
 
-.registrationComponent__title {
-    font-family: 'Lato';
+.registrationPage__title {
     font-style: normal;
     font-weight: 400;
     font-size: 2.4rem;
@@ -14,8 +25,7 @@
     margin-bottom: 1.2rem;
 }
 
-.registrationComponent__label {
-    font-family: 'Lato';
+.registrationPage__label {
     font-style: normal;
     font-weight: 400;
     font-size: 1.4rem;
@@ -28,13 +38,12 @@
     }
 }
 
-.registrationComponent__descriptionContainer {
+.registrationPage__descriptionContainer {
     display: flex;
     justify-content: space-between;
 }
 
-.registrationComponent__forgotPassword {
-    font-family: 'Lato';
+.registrationPage__forgotPassword {
     font-style: normal;
     font-weight: 500;
     font-size: 1.2rem;
@@ -43,13 +52,13 @@
     color: $lightBlue;
 }
 
-.registrationComponent__checkboxWrapper {
+.registrationPage__checkboxWrapper {
     display: flex;
     align-items: center;
     margin-bottom: 2rem;
 }
 
-.registrationComponent__checkbox {
+.registrationPage__checkbox {
     margin-right: 1.6rem;
     width: 2rem;
     height: 2rem;
@@ -58,19 +67,20 @@
     border-radius: 2px;
 }
 
-.registrationComponent__button {
+.registrationPage__button {
     height: 3.5rem;
-    background: #4076CA;
+    background: #4076ca;
     border-radius: 7px;
     color: $commonWhite;
     width: 100%;
 }
 
-.registrationComponent__input {
+.registrationPage__input {
     width: 100%;
     background: $commonWhite;
     border: 1px solid rgba(189, 189, 189, 0.7);
     border-radius: 7px;
     height: 4rem;
     margin-bottom: 2rem;
+    padding-left: 1.8rem;
 }
