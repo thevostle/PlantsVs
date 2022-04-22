@@ -1,0 +1,15 @@
+.registrationPage {
+    display: flex;
+    justify-content: center;
+}
+
+.registrationPage__column {
+    &_left {
+        padding: 14rem 20rem 14rem 15rem;
+        width: fit-content;
+    }
+}
+
+::placeholder {
+    padding-left: 1.8rem;
+}
