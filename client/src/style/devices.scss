@@ -1,0 +1,23 @@
+@mixin desktop {
+    @media (max-width: 120rem) {
+        @content;
+    }
+}
+
+@mixin notebook {
+    @media (max-width: 98rem) {
+        @content;
+    }
+}
+
+@mixin tablets {
+    @media (max-width: 76.8rem) {
+        @content;
+    }
+}
+
+@mixin phones {
+    @media (max-width: 32rem) {
+        @content;
+    }
+}

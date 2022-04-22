@@ -1,0 +1,62 @@
+@import '../../style/colors.scss';
+
+.profileNews {
+    width: 53rem;
+}
+
+.profileNews__card {
+    padding: 3rem 2rem;
+}
+
+.profileNews__userDataWrapper {
+    display: flex;
+    margin-bottom: 1.8rem;
+}
+
+.profileNews__userPhoto {
+    width: 4.6rem;
+    height: 4.6rem;
+    background: $counterStrikeGray;
+    border: 5px solid $commonWhite;
+    border-radius: 50px;
+    margin-right: 1.5rem;
+}
+
+.profileNews__userTextContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.profileNews__userName {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 135%;
+    color: $darkGray;
+}
+
+.profileNews__userStatus {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    color: $lightGray;
+}
+
+.profileNews__cardContentImage {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.profileNews__cardContentText {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    display: flex;
+    align-items: center;
+    color: $lightGray;
+}

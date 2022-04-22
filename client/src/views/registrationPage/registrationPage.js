@@ -2,7 +2,7 @@ import React from 'react';
 import './registrationPage.scss';
 import img from './signup.png';
 
-const RegistrationPage = () => (
+const RegistrationPage = ({ handleSignUp }) => (
     <div className="registrationPage">
         <div className="registrationPage__column registrationPage__column_left">
             <div className="registrationPage__registrationWrapper">
@@ -13,25 +13,45 @@ const RegistrationPage = () => (
                         type="text"
                         className="registrationPage__input"
                         placeholder="Имя пользователя"
+                        name="username"
                     />
                     <p className="registrationPage__description">Адрес электронной почты</p>
                     <input
-                        type="text"
+                        type="email"
                         className="registrationPage__input"
                         placeholder="Адрес электронной почты"
+                        name="email"
                     />
                     <div className="registrationPage__descriptionContainer">
                         <p className="registrationPage__description">Пароль</p>
                         <p className="registrationPage__forgotPassword">Забыли пароль?</p>
                     </div>
-                    <input type="text" className="registrationPage__input" placeholder="Пароль" />
+                    <input
+                        type="password"
+                        className="registrationPage__input"
+                        name="password"
+                        placeholder="Пароль"
+                    />
                     <div className="registrationPage__checkboxWrapper">
-                        <input type="checkbox" className="registrationPage__checkbox" />
+                        <input
+                            type="checkbox"
+                            name="remember"
+                            className="registrationPage__checkbox"
+                        />
                         <p className="registrationPage__description registrationPage__description_checkbox">
                             Запомнить меня
                         </p>
                     </div>
-                    <button className="registrationPage__button">Зарегистрироваться</button>
+                    <button
+                        type="submit"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            handleSignUp(document.querySelector('input[name="username"]').value);
+                        }}
+                        className="registrationPage__button"
+                    >
+                        Зарегистрироваться
+                    </button>
                 </form>
             </div>
         </div>

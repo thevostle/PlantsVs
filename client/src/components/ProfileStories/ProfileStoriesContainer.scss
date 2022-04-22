@@ -1,0 +1,20 @@
+.profileStoriesContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.profileStoriesContainer__title {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1.8rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $commonBlack;
+}
+
+.profileStoriesContainer__itemsContainer {
+    display: flex;
+}
