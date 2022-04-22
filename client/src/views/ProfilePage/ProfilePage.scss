@@ -1,1 +1,12 @@
 @import '../../style/colors.scss';
+
+.profilePage {
+    display: flex;
+    gap: 2rem;
+}
+
+.profilePage__collumn {
+    &_left {
+        width: 50rem;
+    }
+}

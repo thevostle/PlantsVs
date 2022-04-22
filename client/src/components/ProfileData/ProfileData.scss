@@ -1,0 +1,181 @@
+@import '../../style/colors.scss';
+
+.profileData__calendar {
+    width: 360px;
+    margin: 0 98px 30px 0;
+}
+
+.profileData__calendarMonthYear {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    color: $commonGray;
+}
+
+.profileData__calendarWrapper {
+    width: 310px;
+    margin: 0 20px 22px 29px;
+
+    display: flex;
+}
+
+.profileData__calendarDay {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    color: $commonGray;
+
+    &_active {
+        color: $commonWhite;
+        background: $contrastBlue;
+    }
+}
+
+.profileData__calendarDayData {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: $commonWhite;
+}
+
+.profileData__calendarDayPoints {
+    &_activeSand {
+        background: $sand;
+    }
+
+    &_activeBrick {
+        background: $brick;
+    }
+
+    &_activecontrastBlue {
+        background: $contrastBlue;
+    }
+}
+
+.profileData__line {
+    width: 290px;
+    margin: 0 30px 26px 36px;
+
+    border: 2px solid;
+    border-color: $lightestGray;
+}
+
+.profileData__timetableWrapper {
+    width: 307px;
+    margin: 0 32px 34px 29px;
+}
+
+.profileData__timetableTitle {
+    margin: 0 0 26px 29px;
+    
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+
+    display: flex;
+    align-items: center;
+ 
+    color: $commonGray;
+}
+
+.profileData__timetableTask {
+    width: 294px;
+    margin: 0 24px 18px 42px;
+    
+    &_bottom {
+        margin: 0 24px 24px 42px;
+    }
+}
+
+.profileData__timetableTaskDate {
+    width: 30px;
+    margin: 0 20px 18px 0;
+}
+
+.profileData__timetableTaskMain {
+    width: 250px;
+    
+    background: $uncommonWhite;
+    border-radius: 7px;
+}
+
+.profileData__timetableTaskMainLine {
+    width: 0;
+    height: 28px;
+    margin: 18px 16px 18px 12px;
+
+    border: 2px solid;
+
+    &_orange {
+        border-color: $orange;
+    }
+    
+    &_blue {
+        border-color: $contrastBlue;
+    }
+
+    &_green{
+        border-color: $swampGreen;
+    }
+}
+
+.profileData__timetableTaskMainTitle {
+    margin: 16px 0 20px 0;
+    
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    color: $commonGray;
+}
+
+.profileData__timetableTaskMainProgress {
+    width: 200px;
+
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    color: $lightGray;
+}
+
+.profileData__timetableTaskMainMore {
+    width: 150px;
+    margin: 0 104px 34px 104px;
+    
+    background: $dullBlue;
+    border-radius: 7px;
+}
