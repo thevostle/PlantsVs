@@ -54,8 +54,30 @@
     display: flex;
 }
 
-.profileNotifications__notificationTextAdditionsPoint {
-
+.profileNotifications__notificationTextAdditionsImg {
+    width: 58px;
+    height: 58px;
+    margin: 0 16px 0 0;
 }
 
-.profileNotifications__notificationTextAdditionsT
+.profileNotifications__notificationTextAdditionsPoint {
+    margin: 0 7px 0 0;
+
+    width: 7px;
+    height: 7px;
+
+    background: $lightGreen;
+}
+
+.profileNotifications__notificationTextAdditionsTexet {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    color: $lightGray;
+}

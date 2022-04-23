@@ -4,7 +4,7 @@
     }
 }
 
-@mixin notebook {
+@mixin laptops {
     @media (max-width: 98rem) {
         @content;
     }

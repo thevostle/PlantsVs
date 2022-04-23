@@ -7,7 +7,7 @@ const RegistrationPage = ({ handleSignUp }) => (
         <div className="registrationPage__column registrationPage__column_left">
             <div className="registrationPage__registrationWrapper">
                 <h1 className="registrationPage__title">Регистрация</h1>
-                <form>
+                <form action='62.84.122.64/api/register' method='post'>
                     <p className="registrationPage__description">Имя пользователя</p>
                     <input
                         type="text"

@@ -1,12 +1,19 @@
 @import '../../style/colors.scss';
+@import '../../style/devices.scss';
 
 .profileBio {
+    display: flex;
+    flex-direction: column;
     padding: 2.2rem;
     background: $commonWhite;
     border-radius: 19px;
     width: 29rem;
     margin-top: 4rem;
     position: fixed;
+
+    @include laptops {
+        width: 22rem;
+    }
 }
 
 .profileBio__wallImage {
