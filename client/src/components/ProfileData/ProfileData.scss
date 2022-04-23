@@ -1,15 +1,15 @@
 @import '../../style/colors.scss';
 
 .profileData__calendar {
-    width: 360px;
-    margin: 0 98px 30px 0;
+    width: 36rem;
+    margin: 0 10rem 3rem 0;
 }
 
 .profileData__calendarMonthYear {
     font-family: 'Lato';
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 100%;
 
     display: flex;
@@ -19,8 +19,8 @@
 }
 
 .profileData__calendarWrapper {
-    width: 310px;
-    margin: 0 20px 22px 29px;
+    width: 31rem;
+    margin: 0 2rem 2rem 3rem;
 
     display: flex;
 }
@@ -29,8 +29,9 @@
     font-family: 'Lato';
     font-style: normal;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 1.2rem;
     line-height: 100%;
+    height: 6.4rem;
     
     display: flex;
     flex-direction: column;
@@ -49,7 +50,7 @@
     font-family: 'Lato';
     font-style: normal;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 1.2rem;
     line-height: 100%;
     
     display: flex;
@@ -74,20 +75,20 @@
 }
 
 .profileData__line {
-    width: 290px;
-    margin: 0 30px 26px 36px;
+    width: 29rem;
+    margin: 0 3rem 3rem 3rem;
 
     border: 2px solid;
     border-color: $lightestGray;
 }
 
 .profileData__timetableWrapper {
-    width: 307px;
-    margin: 0 32px 34px 29px;
+    width: 31rem;
+    margin: 0 3rem 3rem 3rem;
 }
 
 .profileData__timetableTitle {
-    margin: 0 0 26px 29px;
+    margin: 0 0 3rem 3rem;
     
     font-family: 'Lato';
     font-style: normal;
@@ -102,21 +103,39 @@
 }
 
 .profileData__timetableTask {
-    width: 294px;
-    margin: 0 24px 18px 42px;
+    width: 30rem;
+    margin: 0 2.4rem 1.8rem 4.2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     
     &_bottom {
-        margin: 0 24px 24px 42px;
+        margin: 0 2.4rem 2.4rem 4.2rem;
     }
 }
 
-.profileData__timetableTaskDate {
-    width: 30px;
-    margin: 0 20px 18px 0;
+.profileData__timetableTaskDateWrapper {
+    width: 3rem;
+    margin: 0 2rem 1.8rem 0;
+}
+
+.rpofileData__timetableTaskDate {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 100%;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: $gray;
 }
 
 .profileData__timetableTaskMain {
-    width: 250px;
+    display: flex;
+    width: 25rem;
     
     background: $uncommonWhite;
     border-radius: 7px;
@@ -124,8 +143,8 @@
 
 .profileData__timetableTaskMainLine {
     width: 0;
-    height: 28px;
-    margin: 18px 16px 18px 12px;
+    height: 3rem;
+    margin: 2rem 1.6rem 2rem 1.2rem;
 
     border: 2px solid;
 
@@ -143,12 +162,12 @@
 }
 
 .profileData__timetableTaskMainTitle {
-    margin: 16px 0 20px 0;
+    margin: 1.6rem 0 2rem 0;
     
     font-family: 'Lato';
     font-style: normal;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 1.4rem;
     line-height: 100%;
 
     display: flex;
@@ -158,12 +177,12 @@
 }
 
 .profileData__timetableTaskMainProgress {
-    width: 200px;
+    width: 20rem;
 
     font-family: 'Lato';
     font-style: normal;
     font-weight: 500;
-    font-size: 11px;
+    font-size: 1.2rem;
     line-height: 100%;
 
     display: flex;
@@ -173,8 +192,8 @@
 }
 
 .profileData__timetableTaskMainMore {
-    width: 150px;
-    margin: 0 104px 34px 104px;
+    width: 15rem;
+    margin: 0 10rem 3.6rem 10rem;
     
     background: $dullBlue;
     border-radius: 7px;
