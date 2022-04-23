@@ -23,3 +23,39 @@
 
     color: $commonGray;
 }
+
+.profileNotifications__notification {
+    margin: 0 0 16px 32px;
+
+    &_bottom {
+        margin: 0 0 32px 32px;
+    }
+}
+
+.profileNotifications__notificationText {
+    display: flex;
+    align-content: space-around;
+}
+
+.profileNotifications__notificationTextTitle {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+.profileNotifications__notificationTextAdditions {
+    display: flex;
+}
+
+.profileNotifications__notificationTextAdditionsPoint {
+
+}
+
+.profileNotifications__notificationTextAdditionsT
