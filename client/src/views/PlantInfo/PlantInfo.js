@@ -3,17 +3,17 @@ import './ProfileData.scss';
 
 const PlantInfo = () => (
     <div className="plantInfo">
-        <div className="plantInfoHedder">
-            <div className="plantInfoHedder__logo">
+        <div className="Header">
+            <div className="Header__logo">
 
             </div>
-            <div className="plantInfoHedder__links">
-                <div className="plantInfoHedder__link">Мои детишки</div>
-                <div className="plantInfoHedder__link">Каталог</div>
-                <div className="plantInfoHedder__link">Прогресс</div>
-                <div className="plantInfoHedder__link">Блог</div>
+            <div className="Header__links">
+                <div className="Header__link">Мои детишки</div>
+                <div className="Header__link">Каталог</div>
+                <div className="Header__link">Прогресс</div>
+                <div className="Header__link">Блог</div>
             </div>
-            <div className="plantInfoHedder__search"></div>
+            <div className="Header__search"></div>
         </div>
         <div className="plantInfoMain">
             <div className="plantInfoMain__media">
@@ -34,7 +34,7 @@ const PlantInfo = () => (
                     </div>
                     <div className="plantInfoMain__mediaCardsConteyner">
                         <div className="plantInfoMain__mediaCard">
-                            <div className="plantInfoMain__mediaCardHedder">
+                            <div className="plantInfoMain__mediaCardHeader">
                                 <div className="plantInfoMain__mediaCardTitle">Полив</div>
                                 <div className="plantInfoMain__mediaCardImg">
                                     <img></img>

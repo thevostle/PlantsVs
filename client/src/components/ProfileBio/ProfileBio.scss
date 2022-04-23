@@ -2,17 +2,21 @@
 @import '../../style/devices.scss';
 
 .profileBio {
+    width: 22rem;
+
+    @include laptops {
+        width: 22rem;
+    }
+}
+
+.profileBio__fixedWrapper {
     display: flex;
     flex-direction: column;
     padding: 2.2rem;
     background: $commonWhite;
     border-radius: 19px;
-    width: 29rem;
+    width: 22rem;
     position: fixed;
-
-    @include laptops {
-        width: 22rem;
-    }
 }
 
 .profileBio__wallImage {

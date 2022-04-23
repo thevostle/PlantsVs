@@ -2,16 +2,9 @@
 
 .profilePage {
     display: flex;
-    gap: 2rem;
+    justify-content: space-around;
 }
 
 .profilePage__collumn {
-    &_left {
-        width: 50rem;
-    }
 
-    &_center {
-        margin-left: 30rem;
-        width: 30rem;
-    }
 }

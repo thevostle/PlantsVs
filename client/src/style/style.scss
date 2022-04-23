@@ -1,5 +1,8 @@
+@import "./devices.scss";
+
 body {
     margin: 0;
+    width: auto;
 }
 
 .container {
@@ -8,4 +11,12 @@ body {
     &_flex {
         display: flex;
     }
+}
+
+.hide {
+    display: none;
+}
+
+.hideOnDesktop {
+    display: none;
 }

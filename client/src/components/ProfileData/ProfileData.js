@@ -6,7 +6,7 @@ const ProfileData = () => (
         <div className="profileData__calendar">
             <div className="profileData__calendarMonthYear">Апрель 2022</div>
             <div className="profileData__calendarWrapper">
-                <div className="profileData__calendarDay_actie">
+                <div className="profileData__calendarDay_active">
                     <div className="profileData__calendarDayData">Пт</div>
                     <div className="profileData__calendarDayData">22</div>
                     <div className="profileData__calendarDayPoints"></div>

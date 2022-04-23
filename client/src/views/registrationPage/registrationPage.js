@@ -1,17 +1,16 @@
 import React from 'react';
 import { useState } from 'react';
 import './registrationPage.scss';
+import '../../style/style.scss';
 import img from './signup.png';
 
-// Добавить переключатель входа
-
 const RegistrationPage = ({ handleSignUp }) => {
+    const [isLogin, setIsLogin] = useState(false);
+    const [isRemember, setIsRemember] = useState(false);
     const [authData, setAuthData] = useState({
         username: '',
         email: '',
         password: '',
-        remember: '',
-        action: 'registration',
     });
 
     const handleChange = (e) => {
@@ -19,11 +18,23 @@ const RegistrationPage = ({ handleSignUp }) => {
         setAuthData((prev) => ({ ...prev, [name]: value }));
     };
 
+    const switchIsLogin = () => {
+        setIsLogin((prev) => !prev);
+    };
+
+    const switchIsRemember = () => {
+        setIsRemember((prev) => !prev);
+    };
+
     return (
         <div className="registrationPage">
             <div className="registrationPage__column registrationPage__column_left">
                 <div className="registrationPage__registrationWrapper">
-                    <h1 className="registrationPage__title">Регистрация</h1>
+                    <h1 className="registrationPage__title">{isLogin ? 'Вход' : 'Регистрация'}</h1>
+                    <span>{isLogin ? 'У меня нет акка.' : 'У меня уже есть акк.'}</span>
+                    <span style={{ color: 'blue' }} onClick={switchIsLogin}>
+                        {isLogin ? 'Зарегаться' : 'Войти'}
+                    </span>
                     <form>
                         <p className="registrationPage__description">Имя пользователя</p>
                         <input
@@ -34,10 +45,16 @@ const RegistrationPage = ({ handleSignUp }) => {
                             value={authData['username']}
                             onChange={handleChange}
                         />
-                        <p className="registrationPage__description">Адрес электронной почты</p>
+                        <p
+                            className={`registrationPage__description ${
+                                isLogin ? 'hideOnDesktop' : ''
+                            }`}
+                        >
+                            Адрес электронной почты
+                        </p>
                         <input
                             type="email"
-                            className="registrationPage__input"
+                            className={`registrationPage__input ${isLogin ? 'hideOnDesktop' : ''}`}
                             placeholder="Адрес электронной почты"
                             name="email"
                             value={authData['email']}
@@ -60,9 +77,8 @@ const RegistrationPage = ({ handleSignUp }) => {
                                 type="checkbox"
                                 name="remember"
                                 className="registrationPage__checkbox"
-                                // checked={authData["remember"]}
-                                value={authData['remember']}
-                                onChange={handleChange}
+                                checked={isRemember}
+                                onChange={switchIsRemember}
                             />
                             <p className="registrationPage__description registrationPage__description_checkbox">
                                 Запомнить меня
@@ -72,11 +88,11 @@ const RegistrationPage = ({ handleSignUp }) => {
                             type="submit"
                             onClick={(e) => {
                                 e.preventDefault();
-                                handleSignUp(authData);
+                                handleSignUp(authData, isLogin, isRemember);
                             }}
                             className="registrationPage__button"
                         >
-                            Зарегистрироваться
+                            {isLogin ? 'Войти' : 'Зарегистрироваться'}
                         </button>
                     </form>
                 </div>

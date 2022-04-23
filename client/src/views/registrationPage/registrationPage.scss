@@ -1,19 +1,36 @@
 @import '../../style/colors.scss';
+@import '../../style/devices.scss';
 
 .registrationPage {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    background: #F9F9F9;
+    min-height: 100vh;
+
+    @include phones {
+        flex-direction: column-reverse;
+    }
 }
 
 .registrationPage__column {
+    display: flex;
+    align-items: center;
+
     &_left {
-        padding: 14rem 20rem 14rem 15rem;
-        width: fit-content;
+        width: auto;
+
+        @include phones {
+            padding: 0;
+        }
     }
 }
 
 .registrationPage__registrationWrapper {
     width: 40rem;
+
+    @include phones {
+        width: 100%;
+    }
 }
 
 .registrationPage__title {
