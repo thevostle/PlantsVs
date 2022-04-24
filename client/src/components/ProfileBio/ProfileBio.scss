@@ -51,20 +51,16 @@
 }
 
 .profileBio__userName {
-    font-family: 'Lato';
     font-style: normal;
     font-weight: 400;
     font-size: 1.6rem;
-    line-height: 135%;
     color: $darkGray;
 }
 
 .profileBio__userStatus {
-    font-family: 'Lato';
     font-style: normal;
     font-weight: 400;
     font-size: 1.4rem;
-    line-height: 100%;
     color: $lightGray;
 }
 
@@ -85,7 +81,6 @@
 .profileBio__statsItem {
     width: 6.4rem;
     font-size: 1.4rem;
-    /*line-height: 100%;*/
     display: flex;
     flex-direction: column;
     align-items: center;

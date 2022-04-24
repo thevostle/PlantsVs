@@ -8,7 +8,6 @@ const PlantsCatalog = () => {
 
     useEffect(() => {
         getPlants().then((res) => {
-            console.log(res);
             setPlants(res.plants);
         });
     }, []);
@@ -20,12 +19,28 @@ const PlantsCatalog = () => {
     return (
         <div className="plantsCatalog">
             <div className="detailPlant">
-                <h2>{plants[detailPlant]?.meta.name}</h2>
-                <p>{plants[detailPlant]?.meta.description}</p>
+                <h2 className="plantsCatalog__plantTitle">{plants[detailPlant]?.meta.name}</h2>
+                <p className="detailPlant__plantDescription">
+                    {plants[detailPlant]?.meta.description}
+                </p>
+                <ul>
+                    {plants[detailPlant]
+                        ? Object.entries(plants[detailPlant].properties).map((prop, index) => (
+                              <li key={index}>
+                                  {prop[0]}: {prop[1]}
+                              </li>
+                          ))
+                        : ''}
+                </ul>
             </div>
             {plants.map((plant) => (
-                <div className="plant" key={plant.meta.id} data-id={plant.meta.id} onClick={showPlant}>
-                    <span>{plant.meta.name}</span>
+                <div
+                    className="plants"
+                    key={plant.meta.id}
+                    data-id={plant.meta.id}
+                    onClick={showPlant}
+                >
+                    <span className="plants__link">{plant.meta.name}</span>
                     <br />
                 </div>
             ))}

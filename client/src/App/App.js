@@ -18,7 +18,6 @@ function App() {
 
     useEffect(() => {
         checkAuth().then((res) => {
-            console.log(`auth status: ${res.status}`);
             if (res.status === 'Authorized') {
                 setUserId(getCookie('user_id'));
             } else {

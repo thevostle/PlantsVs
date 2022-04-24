@@ -1,7 +1,10 @@
 .plantsCatalog {
-    width: 120rem;
-    margin: 0 auto;
-    // margin-top: 18rem;
+    margin: 0 3rem;
+    padding-bottom: 5rem;
+}
+
+.detailPlant__plantDescription {
+    width: 100%;
 }
 
 .plantsCatalog__plantTitle {
@@ -15,12 +18,7 @@
     color: #333333;
 }
 
-.plantsCatalog__plantDescription {
-    height: 10rem;
-    width: 34rem;
-    margin-bottom: 6rem;
-}
-
-.plantsCatalog__button {
-    
+.plants__link {
+    user-select: none;
+    cursor: pointer;
 }

@@ -32,7 +32,9 @@ const RegistrationPage = ({ handleSignUp }) => {
             <div className="registrationPage__column registrationPage__column_left">
                 <div className="registrationPage__registrationWrapper">
                     <h1 className="registrationPage__title">{isLogin ? 'Вход' : 'Регистрация'}</h1>
-                    <span className="registrationPage__entranceText">{isLogin ? 'У меня нет акка.' : 'У меня уже есть акк.'}</span>
+                    <span className="registrationPage__entranceText">
+                        {isLogin ? 'У меня нет акка.' : 'У меня уже есть акк.'}{' '}
+                    </span>
                     <span className="registrationPage__entrance" onClick={switchIsLogin}>
                         {isLogin ? 'Зарегаться' : 'Войти'}
                     </span>
@@ -63,7 +65,13 @@ const RegistrationPage = ({ handleSignUp }) => {
                         />
                         <div className="registrationPage__descriptionContainer">
                             <p className="registrationPage__description">Пароль</p>
-                            <p className={`registrationPage__forgotPassword ${isLogin ? '' : 'hideOnDesktop'}`}>Забыли пароль?</p>
+                            <p
+                                className={`registrationPage__forgotPassword ${
+                                    isLogin ? '' : 'hideOnDesktop'
+                                }`}
+                            >
+                                Забыли пароль?
+                            </p>
                         </div>
                         <input
                             type="password"
@@ -94,15 +102,25 @@ const RegistrationPage = ({ handleSignUp }) => {
                                 }}
                                 className="registrationPage__button"
                             >
-                                <div className="registrationPage__buttonText">{isLogin ? 'Войти' : 'Зарегистрироваться'}</div>
-                                <img src={imgArrow} className={`registrationPage__buttonImage`}/>
+                                <div className="registrationPage__buttonText">
+                                    {isLogin ? 'Войти' : 'Зарегистрироваться'}
+                                </div>
+                                <img
+                                    src={imgArrow}
+                                    className={`registrationPage__buttonImage `}
+                                    type="submit"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        handleSignUp(authData, isLogin, isRemember);
+                                    }}
+                                />
                             </button>
                         </div>
                     </form>
                 </div>
             </div>
             <div className="registrationPage__column registrationPage__column_right">
-                <img src={img} />
+                <img className="registrationPage__image" src={img} />
             </div>
         </div>
     );

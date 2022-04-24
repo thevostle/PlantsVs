@@ -23,16 +23,16 @@ const ProfileBio = ({ username, userId }) => (
             </div>
             <div className="profileBio__statsContainer">
                 <div className="profileBio__statsItem">
-                    <div className="profileBio__statsItemData">12тыс</div>
-                    <div className="profileBio__statsItemDescription">Подписчиков</div>
+                    <div className="profileBio__statsItemData">132</div>
+                    <div className="profileBio__statsItemDescription">Подписки</div>
                 </div>
                 <div className="profileBio__statsItem">
                     <div className="profileBio__statsItemData">12тыс</div>
                     <div className="profileBio__statsItemDescription">Подписчиков</div>
                 </div>
                 <div className="profileBio__statsItem">
-                    <div className="profileBio__statsItemData">12тыс</div>
-                    <div className="profileBio__statsItemDescription">Подписчиков</div>
+                    <div className="profileBio__statsItemData">1млн</div>
+                    <div className="profileBio__statsItemDescription">Лайков</div>
                 </div>
             </div>
             <div className="profileBio__achievementsBlock">

@@ -5,6 +5,7 @@ const SERVER_IP = 'https://62.84.122.64/api';
 
 const auth = async (payload, action) => {
     try {
+        console.log(`${SERVER_IP}/${action}`);
         const response = await fetch(`${SERVER_IP}/${action}`, {
             method: 'POST',
             headers: {
@@ -22,9 +23,6 @@ const auth = async (payload, action) => {
 
 const checkAuth = async () => {
     try {
-        console.log(
-            `${SERVER_IP}/auth?user_id=${getCookie('user_id')}&password=${getCookie('password')}`
-        );
         const response = await fetch(
             `${SERVER_IP}/auth?user_id=${getCookie('user_id')}&password=${getCookie('password')}`,
             { method: 'GET' }
