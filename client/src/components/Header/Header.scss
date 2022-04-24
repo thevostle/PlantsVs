@@ -1,0 +1,33 @@
+@import '../../style/colors.scss';
+
+.header {
+    padding: 2.8rem 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__links {
+    display: flex;
+    justify-content: space-around;
+    width: 50rem;
+}
+
+.header__search {
+    background: $uncommonWhite;
+    width: 25rem;
+    border-radius: 25px;
+    color: #828282;
+}
+
+.header__link {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #333333;
+}

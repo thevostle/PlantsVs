@@ -15,10 +15,8 @@ function App() {
     const [userId, setUserId] = useState('');
 
     useEffect(() => {
-        //todo проверка логина
         checkAuth().then((res) => {
-            console.log(`response:`);
-            console.log(res);
+            console.log(`auth status: ${res.status}`);
         });
         const isLogged = true;
         if (isLogged) setUserId(getCookie('user_id'));
@@ -44,6 +42,10 @@ function App() {
         auth(payload, action).then((res) => {
             console.log(`response:`);
             console.log(res);
+            checkAuth().then((res) => {
+                console.log(`auth status: ${res.status}`);
+                return;
+            });
             setCookie('user_id', res.user_id, isRemember);
             setCookie('password', res.password, isRemember);
             setUserId(res.user_id);

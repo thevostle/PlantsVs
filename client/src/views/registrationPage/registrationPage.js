@@ -94,12 +94,9 @@ const RegistrationPage = ({ handleSignUp }) => {
                                 }}
                                 className="registrationPage__button"
                             >
-                                {isLogin ? 'Войти' : 'Зарегистрироваться'}
+                                <div className="registrationPage__buttonText">{isLogin ? 'Войти' : 'Зарегистрироваться'}</div>
                                 <img src={imgArrow} className={`registrationPage__buttonImage`}/>
                             </button>
-                            <div>
-                                <img />
-                            </div>
                         </div>
                     </form>
                 </div>

@@ -170,9 +170,16 @@
     }
 }
 
-.registrationPage__buttonImage {
+.registrationPage__buttonText {
     @include phones {
-        
+        margin-right: 8rem;
+    }
+}
+
+.registrationPage__buttonImage {
+    display: none;
+    @include phones {
+        display: block;
     }
 }
 

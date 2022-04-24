@@ -4,7 +4,7 @@ import './PlantsCatalog.scss';
 
 const PlantsCatalog = () => {
     const [plants, setPlants] = useState([]);
-    const [detailPlant, setDetailPlant] = useState(1);
+    const [detailPlant, setDetailPlant] = useState(0);
 
     useEffect(() => {
         getPlants().then((res) => {
@@ -14,20 +14,18 @@ const PlantsCatalog = () => {
     }, []);
 
     const showPlant = (e) => {
-        console.log(e.currentTarget.dataset.id);
-        setDetailPlant(e.currentTarget.dataset.id);
-        console.log(plants[detailPlant]);
+        setDetailPlant(e.currentTarget.dataset.id - 1);
     };
 
     return (
         <div className="plantsCatalog">
             <div className="detailPlant">
-                {/* {plants[detailPlant - 1]} */}
-                {/* {plants[detailPlant - 1].description} */}
+                <h2>{plants[detailPlant]?.name}</h2>
+                <p>{plants[detailPlant]?.description}</p>
             </div>
             {plants.map((plant) => (
-                <div className="plant" key={plant.id} data-id={plant.id}>
-                    <span onClick={showPlant}>{plant.name}</span>
+                <div className="plant" key={plant.id} data-id={plant.id} onClick={showPlant}>
+                    <span>{plant.name}</span>
                     <br />
                 </div>
             ))}

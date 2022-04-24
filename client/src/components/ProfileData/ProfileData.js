@@ -4,7 +4,7 @@ import './ProfileData.scss';
 const ProfileData = () => (
     <div className="profileData">
         <div className="profileData__calendar">
-            <div className="profileData__calendarMonthYear">Апрель 2022</div>
+            <div className="profileData__calendarMonthYear">{new Date().getMonth()}</div>
             <div className="profileData__calendarWrapper">
                 <div className="profileData__calendarDay_active">
                     <div className="profileData__calendarDayData">Пт</div>

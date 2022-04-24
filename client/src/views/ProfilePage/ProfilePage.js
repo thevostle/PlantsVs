@@ -16,7 +16,7 @@ const ProfilePage = () => {
 
     useEffect(() => {
         getUser(userId).then((res) => {
-            console.log(res);
+            console.log(`username: ${res.username}`);
         });
     }, []);
 

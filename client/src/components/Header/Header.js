@@ -1,27 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.scss';
+/*import imgLogo from './logo.png';*/
 
 const Header = ({ handleLogout, userId }) => (
     <div>
-        <div className="Header">
-            <div className="Header__logo"></div>
-            <div className="Header__links">
-                <div className="Header__link">
+        <div className="header">
+            <div className="header__logo">
+                <img src="" />
+            </div>
+            <div className="header__links">
+                <div className="header__link">
                     <Link to={`/user/${userId}`}>Мой профиль</Link>
                 </div>
-                <div className="Header__link">Мои детишки</div>
-                <div className="Header__link">
+                <div className="header__link">Мои растения</div>
+                <div className="header__link">
                     <Link to={'/catalog'}>Каталог</Link>
                 </div>
-                <div className="Header__link">Прогресс</div>
-                <div className="Header__link">Блог</div>
+                <div className="header__link">Прогресс</div>
+                <div className="header__link">Блог</div>
             </div>
-            <div className="Header__search"></div>
-        </div>
-        <div>
-            <button onClick={handleLogout}>Выйти</button>
-            <img />
+            <div className="header__search">Поиск</div>
+            <div>
+                <button onClick={handleLogout}>Выйти</button>
+                <img />
+            </div>
         </div>
     </div>
 );
