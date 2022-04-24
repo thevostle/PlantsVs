@@ -6,7 +6,6 @@ const ProfileStoriesContainer = () => (
     <div className="profileStoriesContainer">
         <div className="profileStoriesContainer__title">Новости</div>
         <div className="profileStoriesContainer__itemsContainer">
-            // тут будут элементы-истории
             <ProfileStory />
         </div>
     </div>

@@ -1,8 +1,8 @@
 @import '../../style/colors.scss';
 
 .profileData__calendar {
-    width: 36rem;
-    margin: 0 10rem 3rem 0;
+    /*width: 36rem;*/
+    /*margin: 0 10rem 3rem 0;*/
 }
 
 .profileData__calendarMonthYear {
@@ -19,8 +19,8 @@
 }
 
 .profileData__calendarWrapper {
-    width: 31rem;
-    margin: 0 2rem 2rem 3rem;
+    /*width: 31rem;*/
+    /*margin: 0 2rem 2rem 3rem;*/
 
     display: flex;
 }
@@ -30,7 +30,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 1.2rem;
-    line-height: 100%;
+    /*line-height: 100%;*/
     height: 6.4rem;
     
     display: flex;
@@ -51,7 +51,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 1.2rem;
-    line-height: 100%;
+    /*line-height: 100%;*/
     
     display: flex;
     align-items: center;
@@ -75,7 +75,7 @@
 }
 
 .profileData__line {
-    width: 29rem;
+    /*width: 29rem;*/
     margin: 0 3rem 3rem 3rem;
 
     border: 2px solid;
@@ -83,18 +83,18 @@
 }
 
 .profileData__timetableWrapper {
-    width: 31rem;
-    margin: 0 3rem 3rem 3rem;
+    /*width: 31rem;*/
+    /*margin: 0 3rem 3rem 3rem;*/
 }
 
 .profileData__timetableTitle {
-    margin: 0 0 3rem 3rem;
+    /*margin: 0 0 3rem 3rem;*/
     
     font-family: 'Lato';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 100%;
+    /*line-height: 100%;*/
 
     display: flex;
     align-items: center;
@@ -103,14 +103,14 @@
 }
 
 .profileData__timetableTask {
-    width: 30rem;
-    margin: 0 2.4rem 1.8rem 4.2rem;
+    /*width: 30rem;*/
+    /*margin: 0 2.4rem 1.8rem 4.2rem;*/
     display: flex;
     flex-direction: row;
     align-items: center;
     
     &_bottom {
-        margin: 0 2.4rem 2.4rem 4.2rem;
+        /*margin: 0 2.4rem 2.4rem 4.2rem;*/
     }
 }
 
@@ -135,7 +135,7 @@
 
 .profileData__timetableTaskMain {
     display: flex;
-    width: 25rem;
+    /*width: 25rem;*/
     
     background: $uncommonWhite;
     border-radius: 7px;
@@ -144,7 +144,7 @@
 .profileData__timetableTaskMainLine {
     width: 0;
     height: 3rem;
-    margin: 2rem 1.6rem 2rem 1.2rem;
+    /*margin: 2rem 1.6rem 2rem 1.2rem;*/
 
     border: 2px solid;
 
@@ -162,29 +162,24 @@
 }
 
 .profileData__timetableTaskMainTitle {
-    margin: 1.6rem 0 2rem 0;
-    
+    /*margin: 1.6rem 0 2rem 0;*/ 
     font-family: 'Lato';
     font-style: normal;
     font-weight: 500;
     font-size: 1.4rem;
-    line-height: 100%;
-
+    /*line-height: 100%;*/
     display: flex;
     align-items: center;
-
     color: $commonGray;
 }
 
 .profileData__timetableTaskMainProgress {
-    width: 20rem;
-
+    /*width: 20rem;*/
     font-family: 'Lato';
     font-style: normal;
     font-weight: 500;
     font-size: 1.2rem;
-    line-height: 100%;
-
+    /*line-height: 100%;*/
     display: flex;
     align-items: center;
 

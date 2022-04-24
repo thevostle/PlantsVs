@@ -1,11 +1,18 @@
 @import '../../style/colors.scss';
+@import '../../style/devices.scss';
 
 .profileNews {
-    /*width: 53rem;*/
+    @include laptops {
+        width: normal;
+    }
 }
 
 .profileNews__card {
     padding: 3rem 2rem;
+    
+    @include laptops {
+        padding: 1rem 2rem;
+    }
 }
 
 .profileNews__userDataWrapper {

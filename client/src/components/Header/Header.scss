@@ -1,10 +1,15 @@
 @import '../../style/colors.scss';
+@import '../../style/devices.scss';
 
 .header {
     padding: 2.8rem 10rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include laptops {
+        padding: 1.4rem 3rem;
+    }
 }
 
 .header__links {
@@ -18,13 +23,17 @@
     width: 25rem;
     border-radius: 25px;
     color: #828282;
+
+    @include laptops {
+        width: 10rem;
+    }
 }
 
 .header__link {
     font-family: 'Lato';
     font-style: normal;
     font-weight: 500;
-    font-size: 1.8rem;
+    font-size: 18px;
     line-height: 2.8rem;
     display: flex;
     align-items: center;

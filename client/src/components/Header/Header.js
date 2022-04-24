@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.scss';
-/*import imgLogo from './logo.png';*/
+import imgLogo from './logo.png';
 
 const Header = ({ handleLogout, userId }) => (
     <div>
         <div className="header">
             <div className="header__logo">
-                <img src="" />
+                <img src={imgLogo} />
             </div>
             <div className="header__links">
                 <div className="header__link">
