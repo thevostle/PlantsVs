@@ -12,6 +12,20 @@
     }
 }
 
+.registrationPage__entrance {
+    color: $contrastBlue;
+
+    @include phones {
+        display: none;
+    }
+}
+
+.registrationPage__entranceText {
+    @include phones {
+        display: none;
+    }
+}
+
 .registrationPage__column {
     display: flex;
     align-items: center;
@@ -27,10 +41,6 @@
             padding: 0;
         }
     }
-
-    &_right {
-
-    }
 }
 
 .registrationPage__registrationWrapper {
@@ -44,6 +54,8 @@
 
     @include phones {
         width: 100%;
+        border-radius: 40px 40px 0 0;
+        padding: 2rem;
     }
 }
 
@@ -74,6 +86,12 @@
     justify-content: space-between;
 }
 
+.registrationPage__description {
+    @include phones {
+        display: none;
+    }
+}
+
 .registrationPage__forgotPassword {
     font-style: normal;
     font-weight: 500;
@@ -81,6 +99,25 @@
     line-height: 1.4rem;
     letter-spacing: 0.02em;
     color: $lightBlue;
+
+    @include phones {
+        display: none;
+    }
+}
+
+.registrationPage__descriptionRemember {
+    @include phones {
+        width: 9.3rem;
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.9rem;
+        line-height: 1.1rem;
+        display: flex;
+        align-items: center;
+
+        color: $gray;
+    }
 }
 
 .registrationPage__checkboxWrapper {
@@ -96,6 +133,15 @@
     background: $commonWhite;
     border: 1px solid rgba(189, 189, 189, 0.7);
     border-radius: 2px;
+
+    @include phones {
+        width: 1.3rem;
+
+        background: $commonWhite;
+
+        border: 0.646067px solid rgba(189, 189, 189, 0.7);
+        border-radius: 1.29213px;
+    }
 }
 
 .registrationPage__button {
@@ -104,6 +150,30 @@
     border-radius: 7px;
     color: $commonWhite;
     width: 100%;
+
+    @include phones {
+        background: none;
+        border: none;
+        border-radius: 0;
+
+        width: 13rem;
+        height: 2.6rem;
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+        display: flex;
+        align-items: center;
+
+        color: $commonBlack;
+    }
+}
+
+.registrationPage__buttonImage {
+    @include phones {
+        
+    }
 }
 
 .registrationPage__input {
@@ -112,6 +182,18 @@
     border: 1px solid rgba(189, 189, 189, 0.7);
     border-radius: 7px;
     height: 4rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.2rem;
     padding-left: 1.8rem;
+
+    @include phones {
+        border: none;
+        border-bottom: 1px solid rgba(189, 189, 189, 0.7);
+        background: #F9F9F9;
+    }
+}
+
+.registrationPage__input_bottom {
+    @include phones {
+        margin: 0 0 1.2rem 0;
+    }
 }

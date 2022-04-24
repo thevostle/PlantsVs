@@ -20,3 +20,9 @@ body {
 .hideOnDesktop {
     display: none;
 }
+
+.hideOnDesktop {
+    @include phones {
+        display: none;
+    }
+}

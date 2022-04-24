@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './registrationPage.scss';
 import '../../style/style.scss';
 import img from './signup.png';
+import imgArrow from './arrow.png';
 
 const RegistrationPage = ({ handleSignUp }) => {
     const [isLogin, setIsLogin] = useState(false);
@@ -31,8 +32,8 @@ const RegistrationPage = ({ handleSignUp }) => {
             <div className="registrationPage__column registrationPage__column_left">
                 <div className="registrationPage__registrationWrapper">
                     <h1 className="registrationPage__title">{isLogin ? 'Вход' : 'Регистрация'}</h1>
-                    <span>{isLogin ? 'У меня нет акка.' : 'У меня уже есть акк.'}</span>
-                    <span style={{ color: 'blue' }} onClick={switchIsLogin}>
+                    <span className="registrationPage__entranceText">{isLogin ? 'У меня нет акка.' : 'У меня уже есть акк.'}</span>
+                    <span className="registrationPage__entrance" onClick={switchIsLogin}>
                         {isLogin ? 'Зарегаться' : 'Войти'}
                     </span>
                     <form>
@@ -62,11 +63,11 @@ const RegistrationPage = ({ handleSignUp }) => {
                         />
                         <div className="registrationPage__descriptionContainer">
                             <p className="registrationPage__description">Пароль</p>
-                            <p className="registrationPage__forgotPassword">Забыли пароль?</p>
+                            <p className={`registrationPage__forgotPassword ${isLogin ? '' : 'hideOnDesktop'}`}>Забыли пароль?</p>
                         </div>
                         <input
                             type="password"
-                            className="registrationPage__input"
+                            className="registrationPage__input registrationPage__input_bottom"
                             name="password"
                             placeholder="Пароль"
                             value={authData['password']}
@@ -80,20 +81,26 @@ const RegistrationPage = ({ handleSignUp }) => {
                                 checked={isRemember}
                                 onChange={switchIsRemember}
                             />
-                            <p className="registrationPage__description registrationPage__description_checkbox">
+                            <p className="  registrationPage__description_checkbox">
                                 Запомнить меня
                             </p>
                         </div>
-                        <button
-                            type="submit"
-                            onClick={(e) => {
-                                e.preventDefault();
-                                handleSignUp(authData, isLogin, isRemember);
-                            }}
-                            className="registrationPage__button"
-                        >
-                            {isLogin ? 'Войти' : 'Зарегистрироваться'}
-                        </button>
+                        <div className="registrationPage__buttonWrapper">
+                            <button
+                                type="submit"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    handleSignUp(authData, isLogin, isRemember);
+                                }}
+                                className="registrationPage__button"
+                            >
+                                {isLogin ? 'Войти' : 'Зарегистрироваться'}
+                                <img src={imgArrow} className={`registrationPage__buttonImage`}/>
+                            </button>
+                            <div>
+                                <img />
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
