@@ -1,4 +1,4 @@
-import { React, useEffect } from 'react';
+import { React, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import ProfileBio from '../../components/ProfileBio/ProfileBio';
@@ -8,25 +8,26 @@ import ProfileData from '../../components/ProfileData/ProfileData';
 import ProfileNotifications from '../../components/ProfileNotifications/ProfileNotifications';
 
 import './ProfilePage.scss';
-import { getCookie } from '../../utils/cookie';
 import { getUser } from '../../utils/network';
 
 const ProfilePage = () => {
     const { userId } = useParams();
+    const [username, setUsername] = useState('');
 
     useEffect(() => {
         getUser(userId).then((res) => {
-            console.log(`username: ${res.username}`);
+            if (res.status === "Error#8: The user_id doesn't exist") {
+                window.location.assign('/NotFound');
+                return;
+            }
+            setUsername(res.username);
         });
     }, []);
 
     return (
         <div className="profilePage">
             <div className="profilePage__collumn profilePage__collumn_left">
-                Username id: {userId}
-                <br />
-                {userId == getCookie('user_id') ? 'Ваш профиль' : 'Не ваш профиль'}
-                <ProfileBio />
+                <ProfileBio userId={userId} username={username} />
             </div>
             <div className="profilePage__collumn profilePage__collumn_center">
                 <ProfileStoriesContainer />

@@ -1,15 +1,24 @@
 import React from 'react';
+import { getCookie } from '../../utils/cookie';
 import './ProfileBio.scss';
 
-const ProfileBio = () => (
-    <div className='profileBio'>
-        <div className='profileBio__fixedWrapper'>
-            <div className='profileBio__wallImage'></div>
-            <div className='profileBio__userDataWrapper'>
-                <img className='profileBio__userPhoto'></img>
-                <div className='profileBio__userTextContainer'>
-                    <div className="profileBio__userName"></div>
-                    <div className="profileBio__userStatus"></div>
+const ProfileBio = ({ username, userId }) => (
+    <div className="profileBio">
+        <div className="profileBio__fixedWrapper">
+            <div className="profileBio__wallImage"></div>
+            <div className="profileBio__userDataWrapper">
+                <img className="profileBio__userPhoto"></img>
+                <div className="profileBio__userTextContainer">
+                    <div className="profileBio__userName">{username}</div>
+                    <div className="profileBio__userStatus">
+                        Username id: {userId}
+                        <br />
+                        {userId == getCookie('user_id') ? (
+                            <button type="button">Edit profile</button>
+                        ) : (
+                            ''
+                        )}
+                    </div>
                 </div>
             </div>
             <div className="profileBio__statsContainer">

@@ -1,15 +1,17 @@
 import React, { useState, useEffect, Fragment } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
 import RegistrationPage from '../views/registrationPage/registrationPage';
 import ProfilePage from '../views/ProfilePage/ProfilePage';
+import NotFound from '../views/NotFound/NotFound';
+import PlantsCatalog from '../views/PlantsCatalog/PlantsCatalog';
 import Header from '../components/Header/Header';
 
 import { auth, checkAuth } from '../utils/network';
 import { deleteCookie, getCookie, setCookie } from '../utils/cookie';
 
 import './App.scss';
-import PlantsCatalog from '../views/PlantsCatalog/PlantsCatalog';
+import { getUser } from '../utils/network';
 
 function App() {
     const [userId, setUserId] = useState('');
@@ -17,9 +19,12 @@ function App() {
     useEffect(() => {
         checkAuth().then((res) => {
             console.log(`auth status: ${res.status}`);
+            if (res.status === 'Authorized') {
+                setUserId(getCookie('user_id'));
+            } else {
+                console.log('Unauthorized');
+            }
         });
-        const isLogged = true;
-        if (isLogged) setUserId(getCookie('user_id'));
     }, []);
 
     const handleSignUp = (payload, isLogin, isRemember) => {
@@ -90,14 +95,16 @@ function App() {
                         )}
                     </Route>
                     <Fragment>
-                        <Header handleLogout={handleLogout} userId={userId} />
-                        <input type="button" onClick={notifSet()} value="Notification" />
+                        <Header handleLogout={handleLogout} notifSet={notifSet} userId={userId} />
                         <Switch>
                             <Route path="/catalog">
                                 <PlantsCatalog />
                             </Route>
                             <Route path="/user/:userId">
                                 <ProfilePage />
+                            </Route>
+                            <Route exact path="/NotFound">
+                                <NotFound />
                             </Route>
                         </Switch>
                     </Fragment>

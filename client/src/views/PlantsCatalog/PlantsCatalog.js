@@ -20,12 +20,12 @@ const PlantsCatalog = () => {
     return (
         <div className="plantsCatalog">
             <div className="detailPlant">
-                <h2>{plants[detailPlant]?.name}</h2>
-                <p>{plants[detailPlant]?.description}</p>
+                <h2>{plants[detailPlant]?.meta.name}</h2>
+                <p>{plants[detailPlant]?.meta.description}</p>
             </div>
             {plants.map((plant) => (
-                <div className="plant" key={plant.id} data-id={plant.id} onClick={showPlant}>
-                    <span>{plant.name}</span>
+                <div className="plant" key={plant.meta.id} data-id={plant.meta.id} onClick={showPlant}>
+                    <span>{plant.meta.name}</span>
                     <br />
                 </div>
             ))}

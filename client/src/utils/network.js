@@ -1,6 +1,7 @@
 import { getCookie } from './cookie';
 
-const SERVER_IP = 'http://62.84.122.64/api';
+const SERVER_IP = 'https://62.84.122.64/api';
+// const SERVER_IP = 'http://62.84.122.64/api';
 
 const auth = async (payload, action) => {
     try {

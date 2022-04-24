@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Header.scss';
 import imgLogo from './logo.png';
 
-const Header = ({ handleLogout, userId }) => (
+const Header = ({ handleLogout, userId, notifSet }) => (
     <div>
         <div className="header">
             <div className="header__logo">
@@ -22,7 +22,12 @@ const Header = ({ handleLogout, userId }) => (
             </div>
             <div className="header__search">Поиск</div>
             <div>
-                <button onClick={handleLogout}>Выйти</button>
+                <button type="button" onClick={handleLogout}>
+                    Выйти
+                </button>
+                <button type="button" onClick={notifSet}>
+                    Notification
+                </button>
                 <img />
             </div>
         </div>
